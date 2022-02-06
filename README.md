@@ -32,7 +32,7 @@ Said characteristics will be chosen by the user.
 
 ## To-Do
 
-- [ ] Basic interface (Button and output)
+- [x] Basic interface (Button and output)
 - [ ] Copy to clipboard
 - [ ] Length selector
 - [ ] 'Include' options
