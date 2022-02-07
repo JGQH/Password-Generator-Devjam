@@ -4,7 +4,7 @@ export default function useForm<T extends string, P = string|number>(defaultValu
   const [ entries, setEntries ] = useState<Record<T, P>>(defaultValues)
 
   function setEntry(entry:T,value:P) {
-    setEntries({ [entry]:value, ...entries })
+    setEntries({ ...entries, [entry]:value })
   }
 
   return [ entries, setEntry ] as const

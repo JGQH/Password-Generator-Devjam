@@ -34,7 +34,7 @@ Said characteristics will be chosen by the user.
 
 - [x] Basic interface (Button and output)
 - [x] Copy to clipboard
-- [ ] Length selector
+- [x] Length selector
 - [ ] 'Include' options
 - [ ] Styling
 
