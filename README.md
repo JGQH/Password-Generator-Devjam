@@ -22,7 +22,7 @@ Said characteristics will be chosen by the user.
 ## Technologies
 
 - [React](https://reactjs.org) v17.0.2
-- [Vite](htttps://vitejs.dev) v2.7.2
+- [Vite](https://vitejs.dev) v2.7.2
 - [TypeScript](https://www.typescriptlang.org) v4.4.4
 - [SASS](https://sass-lang.com/) v1.49.7
 
@@ -33,7 +33,7 @@ Said characteristics will be chosen by the user.
 ## To-Do
 
 - [x] Basic interface (Button and output)
-- [ ] Copy to clipboard
+- [x] Copy to clipboard
 - [ ] Length selector
 - [ ] 'Include' options
 - [ ] Styling
