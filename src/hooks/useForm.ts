@@ -1,10 +1,10 @@
 import { useState } from 'react'
 
-export default function useForm<T extends string, P = string|number>(defaultValues:Record<T, P>) {
-  const [ entries, setEntries ] = useState<Record<T, P>>(defaultValues)
+export default function useForm<T>(defaultValues:T) {
+  const [ entries, setEntries ] = useState<T>(defaultValues)
 
-  function setEntry(entry:T,value:P) {
-    setEntries({ ...entries, [entry]:value })
+  function setEntry<K extends keyof T>(entry:K, value:T[K]) {
+    setEntries({ ...entries, [entry]: value })
   }
 
   return [ entries, setEntry ] as const

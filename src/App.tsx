@@ -18,6 +18,38 @@ export default function App() {
           <input type='number' min='10' max='100' defaultValue='20' onChange={e => setEntry('length', +e.target.value)} />
         </div>
       </div>
+      <div>
+        <div>
+          Include Uppercase letters:
+        </div>
+        <div>
+          <input type='checkbox' onChange={e => setEntry('uppercase', e.target.checked)} />
+        </div>
+      </div>
+      <div>
+        <div>
+          Include Lowercase letters:
+        </div>
+        <div>
+          <input type='checkbox' defaultChecked={true} onChange={e => setEntry('lowercase', e.target.checked)} />
+        </div>
+      </div>
+      <div>
+        <div>
+          Include numbers:
+        </div>
+        <div>
+          <input type='checkbox' onChange={e => setEntry('numbers', e.target.checked)} />
+        </div>
+      </div>
+      <div>
+        <div>
+          Include symbols:
+        </div>
+        <div>
+          <input type='checkbox' onChange={e => setEntry('symbols', e.target.checked)} />
+        </div>
+      </div>
       <Generator generator={generator} />
     </div>
   )
