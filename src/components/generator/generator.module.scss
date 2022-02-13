@@ -1,0 +1,32 @@
+@use 'src/_utilities.scss' as *;
+
+.container {
+  position: relative;
+  display: flex;
+  flex-flow: row;
+
+  button {
+    flex-grow: 0;
+    flex-shrink: 1;
+    padding: .5em;
+  }
+
+  .display {
+    position: relative;
+    flex-grow: 1;
+    flex-shrink: 0;
+    overflow-x: auto;
+
+    .content {
+      position: absolute;
+      padding: .5em;
+      inset: 0;
+    }
+  }
+
+  .success {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + .5em);
+  }
+}

@@ -1,12 +1,13 @@
 import React from 'react'
 import usePassword from '@Hooks/usePassword'
 import Generator from '@Components/generator'
+import styles from './App.module.scss'
 
 export default function App() {
   const [ setEntry, generator ] = usePassword()
 
   return (
-    <div>
+    <div className={styles.container}>
       <div>
         <h1>Password Generator</h1>
       </div>

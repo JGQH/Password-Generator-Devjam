@@ -1,5 +1,6 @@
-import useClipboard from '@Hooks/useClipboard'
 import React, { useState } from 'react'
+import useClipboard from '@Hooks/useClipboard'
+import styles from './generator.module.scss'
 
 interface GeneratorProps {
   generator: () => string
@@ -18,17 +19,19 @@ export default function Generator({ generator }:GeneratorProps ) {
   }
 
   return (
-    <div>
+    <div className={styles.container}>
       <button onClick={createPassword}>
         Generate
       </button>
-      <div>
-        {password}
+      <div className={styles.display}>
+        <div className={styles.content}>
+          {password}
+        </div>
       </div>
       <button onClick={copyToClipboard} disabled={password === ''} >
         Copy
       </button>
-      {isCopied && <div>Copied!</div>}
+      {isCopied && <div className={styles.success}>Copied!</div>}
     </div>
   )
 }
