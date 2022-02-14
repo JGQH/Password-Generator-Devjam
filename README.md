@@ -28,7 +28,7 @@ Said characteristics will be chosen by the user.
 
 ## Illustrations
 
-***No images currently W.I.P.***
+![README](./readme/readme.png)
 
 ## To-Do
 
@@ -37,4 +37,4 @@ Said characteristics will be chosen by the user.
 - [x] Length selector
 - [x] 'Include' options
 - [x] Styling
-- [ ] Github Action
+- [x] Github Action
