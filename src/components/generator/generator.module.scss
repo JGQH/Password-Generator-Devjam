@@ -1,17 +1,33 @@
 @use 'src/_utilities.scss' as *;
 
 .container {
+  $color: gray;
+
   position: relative;
   display: flex;
   flex-flow: row;
+  padding: .5em;
 
-  button {
+  .generate, .copy {
     flex-grow: 0;
     flex-shrink: 1;
-    padding: .5em;
+    padding: .75em;
+  }
+
+  .generate {
+    border: 1px solid $color;
+    border-right: none;
+    border-radius: .5em 0 0 .5em;
+  }
+
+  .copy {
+    border: 1px solid $color;
+    border-left: none;
+    border-radius: 0 .5em .5em 0;
   }
 
   .display {
+    border: 1px solid $color;
     position: relative;
     flex-grow: 1;
     flex-shrink: 0;

@@ -1,6 +1,8 @@
 import React from 'react'
-import usePassword from '@Hooks/usePassword'
 import Generator from '@Components/generator'
+import NumberInput from '@Components/numberinput'
+import Checkbox from '@Components/checkbox'
+import usePassword from '@Hooks/usePassword'
 import styles from './App.module.scss'
 
 export default function App() {
@@ -11,46 +13,11 @@ export default function App() {
       <div>
         <h1>Password Generator</h1>
       </div>
-      <div>
-        <div>
-          Password Length:
-        </div>
-        <div>
-          <input type='number' min='10' max='100' defaultValue='20' onChange={e => setEntry('length', +e.target.value)} />
-        </div>
-      </div>
-      <div>
-        <div>
-          Include Uppercase letters:
-        </div>
-        <div>
-          <input type='checkbox' onChange={e => setEntry('uppercase', e.target.checked)} />
-        </div>
-      </div>
-      <div>
-        <div>
-          Include Lowercase letters:
-        </div>
-        <div>
-          <input type='checkbox' defaultChecked={true} onChange={e => setEntry('lowercase', e.target.checked)} />
-        </div>
-      </div>
-      <div>
-        <div>
-          Include numbers:
-        </div>
-        <div>
-          <input type='checkbox' onChange={e => setEntry('numbers', e.target.checked)} />
-        </div>
-      </div>
-      <div>
-        <div>
-          Include symbols:
-        </div>
-        <div>
-          <input type='checkbox' onChange={e => setEntry('symbols', e.target.checked)} />
-        </div>
-      </div>
+      <NumberInput prompt='Password Length:' onChange={newValue => setEntry('length', newValue)} max={100} min={10} />
+      <Checkbox prompt='Include Uppercase letters:' onChange={isChecked => setEntry('uppercase', isChecked)} />
+      <Checkbox prompt='Include Lowercase letters:' defaultValue={true} onChange={isChecked => setEntry('lowercase', isChecked)} />
+      <Checkbox prompt='Include Numbers:' onChange={isChecked => setEntry('numbers', isChecked)} />
+      <Checkbox prompt='Include Symbols:' onChange={isChecked => setEntry('symbols', isChecked)} />
       <Generator generator={generator} />
     </div>
   )

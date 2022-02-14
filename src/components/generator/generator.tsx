@@ -20,7 +20,7 @@ export default function Generator({ generator }:GeneratorProps ) {
 
   return (
     <div className={styles.container}>
-      <button onClick={createPassword}>
+      <button className={styles.generate} onClick={createPassword}>
         Generate
       </button>
       <div className={styles.display}>
@@ -28,7 +28,7 @@ export default function Generator({ generator }:GeneratorProps ) {
           {password}
         </div>
       </div>
-      <button onClick={copyToClipboard} disabled={password === ''} >
+      <button className={styles.copy} onClick={copyToClipboard} disabled={password === ''} >
         Copy
       </button>
       {isCopied && <div className={styles.success}>Copied!</div>}
