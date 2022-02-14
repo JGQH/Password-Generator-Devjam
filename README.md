@@ -33,8 +33,8 @@ Said characteristics will be chosen by the user.
 ## To-Do
 
 - [x] Basic interface (Button and output)
-- xx] Copy to clipboard
+- [x] Copy to clipboard
 - [x] Length selector
 - [x] 'Include' options
-- [ ] Styling
-
+- [x] Styling
+- [ ] Github Action

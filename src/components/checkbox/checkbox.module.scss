@@ -1,3 +1,5 @@
+@use 'src/utilities.scss' as *;
+
 .container {
   width: 100%;
   padding: .5em;
@@ -14,15 +16,18 @@
     flex: 0 1;
 
     button {
+      cursor: pointer;
       border: none;
       background: none;
-      color: gray;
+      color: getNord(4);
       font-size: 1.5rem;
 
       &:focus {
         outline: none;
-        color: blue;
+        color: getNord(8);
       }
+
+      transition: all .25s;
     }
   }
 }

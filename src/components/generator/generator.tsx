@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, CSSProperties } from 'react'
 import useClipboard from '@Hooks/useClipboard'
 import styles from './generator.module.scss'
 
@@ -31,7 +31,7 @@ export default function Generator({ generator }:GeneratorProps ) {
       <button className={styles.copy} onClick={copyToClipboard} disabled={password === ''} >
         Copy
       </button>
-      {isCopied && <div className={styles.success}>Copied!</div>}
+      {isCopied && <div className={styles.success} style={{ '--duration': 1.5 } as CSSProperties}>Copied!</div>}
     </div>
   )
 }

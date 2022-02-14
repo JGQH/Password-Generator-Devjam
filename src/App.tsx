@@ -10,7 +10,7 @@ export default function App() {
 
   return (
     <div className={styles.container}>
-      <div>
+      <div className={styles.prompt}>
         <h1>Password Generator</h1>
       </div>
       <NumberInput prompt='Password Length:' onChange={newValue => setEntry('length', newValue)} max={100} min={10} />

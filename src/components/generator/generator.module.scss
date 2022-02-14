@@ -1,7 +1,7 @@
 @use 'src/_utilities.scss' as *;
 
 .container {
-  $color: gray;
+  $color: getNord(4);
 
   position: relative;
   display: flex;
@@ -9,31 +9,53 @@
   padding: .5em;
 
   .generate, .copy {
+    cursor: pointer;
     flex-grow: 0;
     flex-shrink: 1;
     padding: .75em;
+
+    background: getNord(6);
+    color: getNord(0);
+
+    &:focus {
+      outline: none;
+      border: 1px solid getNord(8);
+      color: getNord(4);
+      background: getNord(10);
+      background: linear-gradient(0deg, getNord(10) 0%, getNord(8) 100%);
+    }
+
+    transition: all .25s;
   }
 
   .generate {
     border: 1px solid $color;
-    border-right: none;
     border-radius: .5em 0 0 .5em;
   }
 
   .copy {
     border: 1px solid $color;
-    border-left: none;
     border-radius: 0 .5em .5em 0;
+
+    &:disabled {
+      cursor: not-allowed;
+      color: getNord(3);
+    }
   }
 
   .display {
     border: 1px solid $color;
+    border-right: none;
+    border-left: none;
+    background: getNord(2);
+
     position: relative;
     flex-grow: 1;
     flex-shrink: 0;
     overflow-x: auto;
 
     .content {
+      white-space: nowrap;
       position: absolute;
       padding: .5em;
       inset: 0;
@@ -41,8 +63,30 @@
   }
 
   .success {
-    position: absolute;
-    right: 0;
     bottom: calc(100% + .5em);
+    position: absolute;
+    padding: .5em;
+    right: 0;
+
+    border: 1px solid getNord(8);
+    border-radius: .5em;
+    background: linear-gradient(0deg, getNord(10) 0%, getNord(8) 100%);
+    color: getNord(4);
+
+    animation: fading calc(var(--duration, 1) * 1s) linear forwards;
+  }
+}
+
+@keyframes fading {
+  0% {
+    opacity: 0;
+  }
+
+  10%, 90% {
+    opacity: 1;
+  }
+  
+  100% {
+    opacity: 0;
   }
 }

@@ -1,9 +1,19 @@
+@use 'src/utilities.scss' as *;
+
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+
+  @media screen and (orientation: portrait) {
+    gap: .5em;
+    flex-direction: column;
+  }
 
   padding: .5em;
-  gap: .5em;
+
+  .prompt {
+    width: 100%
+  }
 
   .display {
     width: 100%;
@@ -11,6 +21,19 @@
     input {
       width: inherit;
       padding: .5em;
+
+      border: 1px solid getNord(4);
+      border-radius: .5em;
+
+      background: getNord(2);
+      color: getNord(4);
+
+      &:focus {
+        outline: none;
+        border: 1px solid getNord(8);
+      }
+
+      transition: all .25s;
     }
   }
 }

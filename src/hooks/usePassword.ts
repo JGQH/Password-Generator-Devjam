@@ -11,7 +11,7 @@ type PasswordParameters = PasswordOptions & {
 
 export default function usePassword() {
   const [ parameters, setEntry ] = useForm<PasswordParameters>({
-    length: 20,
+    length: 10,
     uppercase: false,
     lowercase: true,
     numbers: false,
@@ -29,7 +29,7 @@ const dictionaries:OptionsDictionary<string> = {
   uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
   lowercase: 'abcdefghijklmnopqrstuvwxyz',
   numbers: '0123456789',
-  symbols: '|\'¿´+{}<,.-°!"#$%&/()=?¡¨*[]>;:_¬@·½\\¸~^`'
+  symbols: '|\'¿´+{}<,.-°!"#$%&/()=?¡*[]>;:_¬@·½¸~^`'
 }
 
 function generatePassword({ length, ...options }:PasswordParameters):string {

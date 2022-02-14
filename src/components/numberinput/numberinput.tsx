@@ -25,7 +25,7 @@ export default function NumberInput({ prompt, onChange, max, min }:NumberInputPr
 
   return (
     <div className={styles.container}>
-      <div>
+      <div className={styles.prompt}>
         {prompt}
       </div>
       <div className={styles.display}>

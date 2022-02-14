@@ -1,4 +1,16 @@
+@use 'src/utilities.scss' as *;
+
 .container {
+  width: 100vh;
   justify-self: center;
   align-self: center;
+
+  .prompt {
+    text-align: center;
+    color: getNord(5);
+  }
+
+  @media screen and (orientation: portrait) {
+    width: 100%;
+  }
 }
