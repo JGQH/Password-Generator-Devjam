@@ -14,17 +14,34 @@
 
   .checkbox {
     flex: 0 1;
+    padding: .5em;
 
     button {
       cursor: pointer;
-      border: none;
+
       background: none;
-      color: getNord(4);
-      font-size: 1.5rem;
+      border: 2px solid getNord(4);
+      border-radius: .5em;
+      padding: .5em;
 
       &:focus {
         outline: none;
-        color: getNord(8);
+        border: 2px solid getNord(8);
+
+        .checker {
+          background: getNord(8);
+        }
+      }
+
+      .checker {
+        width: 1em;
+        height: 1em;
+        border-radius: .25em;
+
+        opacity: var(--opacity, 1);
+        background: getNord(4);
+
+        transition: all .125s;
       }
 
       transition: all .25s;

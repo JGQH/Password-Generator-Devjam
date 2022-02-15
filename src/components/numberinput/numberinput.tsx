@@ -15,6 +15,8 @@ export default function NumberInput({ prompt, onChange, max, min }:NumberInputPr
     try {
       const numValue = +value
 
+      if(isNaN(numValue)) return
+
       const newValue = Math.max(min, Math.min(numValue, max)) // Make sure value is between interval
       setInputValue(newValue)
       onChange(newValue)
